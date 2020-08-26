@@ -19,3 +19,4 @@ Route::get('/about','PagesController@about');
 Route::get('/services','PagesController@services');
 Route::get('/createvote','PagesController@CreateVote');
 Route::get('/submitvote','PagesController@SubmitVote');
+Route::get('/submit','PostController@store'); 
