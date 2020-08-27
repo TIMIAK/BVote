@@ -46,6 +46,7 @@ class PostController extends Controller
         ]);
         //return $request->input('Vote_Title');
         $Vote = new Vote;
+        $Vote->votecode = 'BV'.rand(10,99).'XPPT'.rand(100,999);
         $Vote->title = $request->input('Vote_Title');
         $Vote->Contestant = $request->input('Name_of_Contestant');
         $Vote->Email_Of_Voters = $request->input('Email_Of_Voters');

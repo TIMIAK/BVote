@@ -16,6 +16,7 @@ class CreateVotesTable extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->id();
+            $table->string('votecode');
             $table->string('title');
             $table->string('Contestant');
             $table->string('Email_Of_Voters');
