@@ -44,13 +44,19 @@ class PostController extends Controller
             'Start_Time' => 'required',
             'End_Time' => 'required',
         ]);
-        /*$Vote = new Vote;
+        //return $request->input('Vote_Title');
+        $Vote = new Vote;
         $Vote->title = $request->input('Vote_Title');
         $Vote->Contestant = $request->input('Name_of_Contestant');
+        $Vote->Email_Of_Voters = $request->input('Email_Of_Voters');
+        $Vote->Start_Date = $request->input('Start_Date');
+        $Vote->End_Date = $request->input('End_Date');
+        $Vote->Start_Time = $request->input('Start_Time');
+        $Vote->End_Time = $request->input('End_Time');
         $Vote->save();
 
         return redirect('/createvote')->with('success','Vote Submitted');
-            */
+
     }
 
     /**

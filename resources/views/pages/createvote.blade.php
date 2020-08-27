@@ -3,7 +3,7 @@
 
         <div class="row justify-content-center">
             <div class="col-9 insidecontainer justify-content-center">
-                <form action="/submit" method="PUT">
+                <form action="{{URL::to('/submit')}}" method="PUT">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-6">

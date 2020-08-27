@@ -20,3 +20,11 @@ Route::get('/services','PagesController@services');
 Route::get('/createvote','PagesController@CreateVote');
 Route::get('/submitvote','PagesController@SubmitVote');
 Route::get('/submit','PostController@store'); 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
