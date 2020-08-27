@@ -55,7 +55,7 @@ class PostController extends Controller
         $Vote->End_Time = $request->input('End_Time');
         $Vote->save();
 
-        return redirect('/createvote')->with('success','Vote Submitted');
+        return redirect('/')->with('success','Vote Submitted');
 
     }
 

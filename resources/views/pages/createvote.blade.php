@@ -48,7 +48,7 @@
                            <div class="col">
                                 <label for="votetitle" class="text-danger">Email of Voters</label>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="Email_Of_Voters" name="Email_Of_Voters" placeholder="Email Address of Voters" required>
+                                    <input type="text" class="form-control" id="Email_Of_Voters" name="Email_Of_Voters" placeholder="Email Address of Voters" required>
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="Add_Email_of_Voters()">ADD <span id="Number_Of_Voters"></span></button>
                                     </div>
