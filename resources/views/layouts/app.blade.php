@@ -35,7 +35,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="/about" class="nav-link">About Us</a></li>
+                        <li><a href="/services" class="nav-link">Our services</a></li>
+                        <li><a href="/createvote" class="nav-link">Create New Poll</a></li>
+                        <li><a href="/submitvote" class="nav-link">Submit Poll</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -1,9 +1,30 @@
 @extends('layouts.app')
 @section('content')
+    <script>
+        var Name_of_Contestant = [];
+        var Number_of_Contestant = 0;
+        var Email_Of_Voters = [];
+        var Number_Of_Voters = 0;
+        function Add_Name_of_Contestant(){
 
+            var name = document.getElementById('Name_of_Contestant').value;
+            Name_of_Contestant.push(name)
+            Number_of_Contestant = Name_of_Contestant.length;
+            document.getElementById('Number_of_Contestant').innerHTML = Number_of_Contestant;
+            document.getElementById('Name_of_Contestant').value = '';
+
+        }
+        function Add_Email_of_Voters(){
+            var name = document.getElementById('Email_Of_Voters').value;
+            Email_Of_Voters.push(name)
+            Number_Of_Voters = Email_Of_Voters.length;
+            document.getElementById('Number_Of_Voters').innerHTML = Number_Of_Voters;
+            document.getElementById('Email_Of_Voters').value = '';
+        }
+    </script>
         <div class="row justify-content-center">
             <div class="col-9 insidecontainer justify-content-center">
-                <form action="{{URL::to('/submit')}}" method="PUT">
+                <form action="{{action('PostController@store')}}" method="PUT">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-6">
@@ -13,9 +34,10 @@
                             <div class="col-6">
                                 <label for="votetitle" class="text-danger">Name of Contestant</label>
                                 <div class="input-group">
-                                    <input type="text" name="Name_of_Contestant" class="form-control" placeholder="Name of Contestant" required>
+                                    <input type="text" id="Name_of_Contestant" name="Name_of_Contestant" class="form-control" placeholder="Name of Contestant" required>
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">ADD</button>
+
+                                    <button class="btn btn-outline-secondary" type="button" onclick="Add_Name_of_Contestant()">ADD <span id="Number_of_Contestant"></span></button>
                                     </div>
                                 </div>
                             </div>
@@ -26,9 +48,9 @@
                            <div class="col">
                                 <label for="votetitle" class="text-danger">Email of Voters</label>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" name="Email_Of_Voters" placeholder="Email Address of Voters" required>
+                                    <input type="email" class="form-control" id="Email_Of_Voters" name="Email_Of_Voters" placeholder="Email Address of Voters" required>
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">ADD</button>
+                                        <button class="btn btn-outline-secondary" type="button" onclick="Add_Email_of_Voters()">ADD <span id="Number_Of_Voters"></span></button>
                                     </div>
                                 </div>
                             </div>
